@@ -14,7 +14,7 @@ class ContactStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'imgae' => ['nullable'],
+            'imgae' => ['nullable', 'max:3000'],
             'first_name' => ['required', 'max:255', 'string'],
             'last_name' => ['required', 'max:255', 'string'],
             'email' => ['required', 'email'],
